@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ur" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Hazri — Attendance</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masjid-header">
+    <img src="logo.svg" class="logo" alt="Madrasa logo">
+    <div>
+      <div class="school-name">[Madrasa Ka Naam]</div>
+      <div class="school-sub">Teacher Attendance — Class Hazri</div>
+    </div>
+  </div>
+
+  <div id="banner" class="class-banner">
+    <div class="label">CLASS</div>
+    <div class="name" id="className">Loading…</div>
+  </div>
+
+  <div class="card">
+    <label for="teacherSelect">Apna naam chunein</label>
+    <select id="teacherSelect">
+      <option value="">— Select Teacher —</option>
+    </select>
+
+    <button id="actionBtn" disabled>Select your name first</button>
+
+    <div id="statusMsg" class="status-msg"></div>
+  </div>
+
+</div>
+
+<script type="module" src="js/checkin.js"></script>
+</body>
+</html>
