@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Hazri — Admin</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap wide">
+
+  <div class="masjid-header">
+    <img src="logo.svg" class="logo" alt="Madrasa logo">
+    <div>
+      <div class="school-name">[Madrasa Ka Naam]</div>
+      <div class="school-sub">Admin — Attendance Records</div>
+    </div>
+  </div>
+
+  <div id="pinGate" class="card" style="max-width:340px;">
+    <label for="pinInput">Admin PIN</label>
+    <input type="password" id="pinInput" inputmode="numeric" placeholder="••••">
+    <button id="pinBtn">Enter</button>
+    <div id="pinError" class="status-msg err"></div>
+  </div>
+
+  <div id="dashboard" style="display:none;">
+
+    <div class="card" style="margin-bottom:20px;">
+      <div class="filters">
+        <div>
+          <label for="dateFilter">Date</label>
+          <input type="text" id="dateFilter" placeholder="YYYY-MM-DD (khali chhodein = sab)">
+        </div>
+        <div>
+          <label for="classFilter">Class</label>
+          <select id="classFilter">
+            <option value="">Saari Classes</option>
+          </select>
+        </div>
+      </div>
+      <div id="summary" style="font-size:0.85rem;color:#6B6455;"></div>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Teacher</th>
+            <th>Class</th>
+            <th>Date</th>
+            <th>Arrival</th>
+            <th>Departure</th>
+          </tr>
+        </thead>
+        <tbody id="recordsBody"></tbody>
+      </table>
+      <div id="emptyMsg" style="display:none;padding:20px 0;text-align:center;color:#6B6455;font-size:0.88rem;">
+        Is filter ke liye koi record nahi mila.
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
