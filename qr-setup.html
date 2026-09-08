@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Hazri — QR Codes</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+<div class="wrap wide">
+
+  <div class="masjid-header">
+    <img src="logo.svg" class="logo" alt="Madrasa logo">
+    <div>
+      <div class="school-name">[Madrasa Ka Naam]</div>
+      <div class="school-sub">Classroom QR Codes — Print &amp; Post</div>
+    </div>
+  </div>
+
+  <div class="card no-print">
+    <p style="margin:0 0 12px;font-size:0.9rem;color:#6B6455;">
+      Ye 5 QR codes ek hi baar generate hote hain. Har ek ko print karke us class ke darwaze ya deewar par laga dein.
+      Teacher apne mobile se scan karega to seedha check-in page khulega.
+    </p>
+    <p style="margin:0;font-size:0.82rem;color:#6B6455;">
+      Site live hone ke baad, <code>js/qr-generator.js</code> mein <code>BASE_URL</code> apni actual website
+      link se update kar dein.
+    </p>
+  </div>
+
+  <div id="qrGrid" class="qr-grid"></div>
+
+  <button class="print-btn no-print" onclick="window.print()">Print All QR Codes</button>
+
+</div>
+
+<script type="module" src="js/qr-generator.js"></script>
+</body>
+</html>
